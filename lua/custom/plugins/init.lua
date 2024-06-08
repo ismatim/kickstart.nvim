@@ -7,6 +7,7 @@ local map = vim.api.nvim_set_keymap
 local default_opts = { noremap = true, silent = true }
 local g = vim.g -- global variables
 
+vim.keymap.set('n', '<C-l>', '<cmd>nohlsearch<CR>')
 map('n', '<leader>t', ':tabnew<CR>', default_opts)
 map('n', '<leader>rt', ':+tabmove<CR>', default_opts)
 map('n', '<leader>rT', ':-tabmove<CR>', default_opts)
@@ -20,8 +21,16 @@ map('n', '<C-n>', ':Neotree<CR>', default_opts) -- open/close
 map('n', '<leader>r', ':Neotree reveal<CR>', default_opts) -- refresh
 map('n', '<C-a>', 'ggVG', default_opts)
 
+map('n', '<leader>cc', ':CommentToggle<CR>', { noremap = true })
+map('v', '<leader>cc', ':CommentToggle<CR>', { noremap = true })
+
 return {
   { 'github/copilot.vim' },
-
+  { 'tpope/vim-fugitive' },
+  { 'tpope/vim-dadbod' },
+  { 'tpope/vim-rhubarb' },
+  { 'tpope/vim-surround' },
+  { 'mattn/emmet-vim' },
+  'terrortylor/nvim-comment',
   --require 'github/copilot.vim',
 }
