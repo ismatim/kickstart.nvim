@@ -21,8 +21,16 @@ map('n', '<C-n>', ':Neotree<CR>', default_opts) -- open/close
 map('n', '<leader>r', ':Neotree reveal<CR>', default_opts) -- refresh
 map('n', '<C-a>', 'ggVG', default_opts)
 
+map('n', '<C-l>', ':nohl<CR>', { noremap = true })
+
 map('n', '<leader>cc', ':CommentToggle<CR>', { noremap = true })
 map('v', '<leader>cc', ':CommentToggle<CR>', { noremap = true })
+
+map('n', '<leader>gl', ':Git log -p -- % <CR>', default_opts)
+
+-- fast saving with <leader> and s
+map('n', '<leader>s', ':w<CR>', default_opts)
+map('i', '<leader>s', '<C-c>:w<CR>', default_opts)
 
 return {
   { 'github/copilot.vim' },
