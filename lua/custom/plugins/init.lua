@@ -53,6 +53,7 @@ return {
   'terrortylor/nvim-comment',
   'mattn/emmet-vim',
   { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
+  { 'chrisbra/unicode.vim' },
   --'mfussenegger/nvim-dap',
   --require 'github/copilot.vim',
 }
